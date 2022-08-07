@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#5AA9E6"
+    tools:context=".ScholarshipFragment">
+
+    <com.google.android.material.card.MaterialCardView
+
+        android:id="@+id/materialCardView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginHorizontal="50dp"
+        android:layout_marginVertical="50dp"
+        android:transitionName="scholarship"
+        app:cardCornerRadius="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingHorizontal="30dp"
+            android:paddingVertical="30dp">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/gradeText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="三年级"
+                android:textSize="18dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/materialCardView3"
+                android:layout_width="0dp"
+                android:layout_height="2dp"
+                android:layout_marginTop="5dp"
+                android:backgroundTint="#247BA0"
+
+                app:cardElevation="0dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/gradeText" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/keepText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="坚持"
+                app:layout_constraintEnd_toStartOf="@+id/scholarshipText2"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/scholarshipText1"
+                app:layout_constraintTop_toTopOf="@+id/scholarshipText1" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/synthesisText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="综合"
+                app:layout_constraintEnd_toStartOf="@+id/scholarshipText3"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/scholarshipText2"
+                app:layout_constraintTop_toTopOf="@+id/scholarshipText2" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/scholarshipText3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="奖金"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/synthesisText"
+                app:layout_constraintTop_toTopOf="@+id/synthesisText" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/scholarshipText1"
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="奖金"
+                app:layout_constraintEnd_toStartOf="@+id/keepText"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/achievementText"
+                app:layout_constraintTop_toTopOf="@+id/achievementText" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/achievementText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="成绩"
+                app:layout_constraintEnd_toStartOf="@+id/scholarshipText1"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/materialCardView3" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/scholarshipText2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="奖金"
+                app:layout_constraintEnd_toStartOf="@+id/synthesisText"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/keepText"
+                app:layout_constraintTop_toTopOf="@+id/keepText" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/scholarshipRecyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/scholarshipText1" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

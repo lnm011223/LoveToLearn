@@ -1,21 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#5AA9E6"
-    tools:context=".HomeFragment">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".LiveAnswerFragment"
+    android:background="#5AA9E6">
 
     <com.google.android.material.card.MaterialCardView
         android:id="@+id/materialCardView"
+        app:cardCornerRadius="20dp"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginHorizontal="50dp"
         android:layout_marginVertical="50dp"
-        android:transitionName="math"
-        app:cardCornerRadius="20dp"
-
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -26,10 +24,8 @@
             android:layout_height="match_parent"
             android:paddingHorizontal="50dp"
             android:paddingVertical="50dp">
-
-
             <com.google.android.material.card.MaterialCardView
-                android:id="@+id/liveAnswerButton"
+                android:id="@+id/deskAppButton"
                 android:layout_width="150dp"
                 android:layout_height="wrap_content"
                 android:layout_margin="20dp"
@@ -50,18 +46,18 @@
                         android:id="@+id/chineseButtonImg1"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:src="@drawable/materialsymbolslivetv"
+                        android:src="@drawable/ic_baseline_desktop_windows_24"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent"
-                        app:tint="#087F8C" />
+                        app:tint="#FF6F59" />
 
                     <androidx.appcompat.widget.AppCompatTextView
 
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="15dp"
-                        android:text="直播答疑"
+                        android:text="课桌App"
                         android:textStyle="bold"
                         app:layout_constraintBottom_toBottomOf="@+id/chineseButtonImg1"
                         app:layout_constraintEnd_toEndOf="parent"
@@ -71,13 +67,12 @@
             </com.google.android.material.card.MaterialCardView>
 
             <com.google.android.material.card.MaterialCardView
-                android:id="@+id/bookButton"
+                android:id="@+id/livbNoticeButton"
                 android:layout_width="150dp"
                 android:layout_height="wrap_content"
                 android:layout_margin="20dp"
                 app:cardCornerRadius="10dp"
                 app:cardElevation="0dp"
-
                 app:layout_constraintBottom_toTopOf="@+id/guideline3"
                 app:layout_constraintStart_toStartOf="@+id/guideline2"
                 app:strokeColor="#eeeeee"
@@ -92,18 +87,18 @@
                         android:id="@+id/chineseButtonImg2"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:src="@drawable/fluentclipboardtasklistltr24filled"
+                        android:src="@drawable/ic_baseline_notifications_24"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent"
-                        app:tint="#087F8C" />
+                        app:tint="#FF6F59" />
 
                     <androidx.appcompat.widget.AppCompatTextView
 
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="15dp"
-                        android:text="周周练"
+                        android:text="直播提醒"
                         android:textStyle="bold"
                         app:layout_constraintBottom_toBottomOf="@+id/chineseButtonImg2"
                         app:layout_constraintEnd_toEndOf="parent"
@@ -113,8 +108,7 @@
             </com.google.android.material.card.MaterialCardView>
 
             <com.google.android.material.card.MaterialCardView
-
-                android:id="@+id/challengeButton"
+                android:id="@+id/askButton"
                 android:layout_width="150dp"
                 android:layout_height="wrap_content"
                 android:layout_margin="20dp"
@@ -134,18 +128,18 @@
                         android:id="@+id/chineseButtonImg3"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:src="@drawable/biawardfill"
+                        android:src="@drawable/ic_mdicommentquestion"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent"
-                        app:tint="#087F8C" />
+                        app:tint="#FF6F59" />
 
                     <androidx.appcompat.widget.AppCompatTextView
 
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="15dp"
-                        android:text="挑战奖学金"
+                        android:text="我要提问"
                         android:textStyle="bold"
                         app:layout_constraintBottom_toBottomOf="@+id/chineseButtonImg3"
                         app:layout_constraintEnd_toEndOf="parent"
@@ -154,47 +148,7 @@
                 </androidx.constraintlayout.widget.ConstraintLayout>
             </com.google.android.material.card.MaterialCardView>
 
-            <com.google.android.material.card.MaterialCardView
-                android:id="@+id/scholarshipButton"
-                android:layout_width="150dp"
-                android:layout_height="wrap_content"
-                android:layout_margin="20dp"
-                app:cardCornerRadius="10dp"
-                app:cardElevation="0dp"
-                android:transitionName="scholarship"
-                app:layout_constraintStart_toStartOf="@+id/guideline2"
-                app:layout_constraintTop_toTopOf="@+id/guideline3"
-                app:strokeColor="#eeeeee"
-                app:strokeWidth="2dp">
 
-                <androidx.constraintlayout.widget.ConstraintLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:padding="15dp">
-
-                    <ImageView
-                        android:id="@+id/chineseButtonImg"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:src="@drawable/oouilistnumberedltr"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent"
-                        app:tint="#087F8C" />
-
-                    <androidx.appcompat.widget.AppCompatTextView
-
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="15dp"
-                        android:text="奖学金榜"
-                        android:textStyle="bold"
-                        app:layout_constraintBottom_toBottomOf="@+id/chineseButtonImg"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintStart_toEndOf="@+id/chineseButtonImg"
-                        app:layout_constraintTop_toTopOf="@+id/chineseButtonImg" />
-                </androidx.constraintlayout.widget.ConstraintLayout>
-            </com.google.android.material.card.MaterialCardView>
 
 
             <androidx.constraintlayout.widget.Guideline
@@ -215,7 +169,4 @@
         </androidx.constraintlayout.widget.ConstraintLayout>
     </com.google.android.material.card.MaterialCardView>
 
-
 </androidx.constraintlayout.widget.ConstraintLayout>
-
-

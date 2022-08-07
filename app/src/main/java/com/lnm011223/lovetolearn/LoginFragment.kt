@@ -9,17 +9,15 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.Navigation
+import androidx.navigation.fragment.FragmentNavigatorExtras
 import com.lnm011223.lovetolearn.databinding.FragmentLoginBinding
 
 
 class LoginFragment : Fragment() {
     private lateinit var binding: FragmentLoginBinding
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-
-    }
-
+    private lateinit var mainViewModel: MainViewModel
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -32,6 +30,7 @@ class LoginFragment : Fragment() {
     @SuppressLint("CommitPrefEdits")
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        mainViewModel = ViewModelProvider(requireActivity()).get(MainViewModel::class.java)
         val prefs = activity?.getSharedPreferences("data",Context.MODE_PRIVATE)
         val isRemember = prefs?.getBoolean("remember_password",false)
         if (isRemember!!) {
@@ -62,7 +61,9 @@ class LoginFragment : Fragment() {
                     edit?.clear()
                 }
                 edit.apply()
-                Navigation.findNavController(it).navigate(R.id.action_loginFragment_to_homeFragment)
+                mainViewModel.account = account
+                val extras = FragmentNavigatorExtras(binding.loginButton to "login")
+                Navigation.findNavController(it).navigate(R.id.action_loginFragment_to_subjectFragment,null,null,extras)
             }
 
         }

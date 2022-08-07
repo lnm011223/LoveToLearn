@@ -3,11 +3,47 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="app/src/main/res/drawable/biawardfill.xml" value="0.316" />
+        <entry key="app/src/main/res/drawable/bxmath.xml" value="0.297" />
+        <entry key="app/src/main/res/drawable/fluentclipboardtasklistltr24filled.xml" value="0.223" />
+        <entry key="app/src/main/res/drawable/ic_baseline_account_circle_24.xml" value="0.401" />
+        <entry key="app/src/main/res/drawable/ic_baseline_book_24.xml" value="0.401" />
+        <entry key="app/src/main/res/drawable/ic_baseline_desktop_windows_24.xml" value="0.401" />
+        <entry key="app/src/main/res/drawable/ic_baseline_lock_24.xml" value="0.297" />
+        <entry key="app/src/main/res/drawable/ic_launcher_background.xml" value="0.401" />
+        <entry key="app/src/main/res/drawable/ic_mdibookopenblankvariant.xml" value="0.297" />
+        <entry key="app/src/main/res/drawable/ic_mdicommentquestion.xml" value="0.316" />
+        <entry key="app/src/main/res/drawable/iconparksolidgoodone.xml" value="0.316" />
+        <entry key="app/src/main/res/drawable/iconparksolidnotebook.xml" value="0.316" />
+        <entry key="app/src/main/res/drawable/iconparksolidnotebookone.xml" value="0.316" />
+        <entry key="app/src/main/res/drawable/iconparksolidrankinglist.xml" value="0.316" />
+        <entry key="app/src/main/res/drawable/icroundplaycircle.xml" value="0.316" />
+        <entry key="app/src/main/res/drawable/materialsymbolseditnote.xml" value="0.316" />
+        <entry key="app/src/main/res/drawable/materialsymbolslivetv.xml" value="0.316" />
+        <entry key="app/src/main/res/drawable/mdiviewdashboardedit.xml" value="0.316" />
+        <entry key="app/src/main/res/drawable/oouilistnumberedltr.xml" value="0.316" />
+        <entry key="app/src/main/res/drawable/riawardfill.xml" value="0.316" />
+        <entry key="app/src/main/res/drawable/riawardline.xml" value="0.316" />
+        <entry key="app/src/main/res/drawable/uilletterchinesea.xml" value="0.297" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.3172295852928602" />
-        <entry key="app/src/main/res/layout/fragment_home.xml" value="0.22830269345874304" />
+        <entry key="app/src/main/res/layout/book_item.xml" value="0.32877297990594273" />
+        <entry key="app/src/main/res/layout/challenge_item.xml" value="0.32877297990594273" />
+        <entry key="app/src/main/res/layout/fragment_book.xml" value="0.32962804617357844" />
+        <entry key="app/src/main/res/layout/fragment_challenge.xml" value="0.32962804617357844" />
+        <entry key="app/src/main/res/layout/fragment_home.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/fragment_live_answer.xml" value="0.32962804617357844" />
         <entry key="app/src/main/res/layout/fragment_login.xml" value="0.125" />
+        <entry key="app/src/main/res/layout/fragment_scholarship.xml" value="0.25" />
         <entry key="app/src/main/res/layout/fragment_signup.xml" value="0.3172295852928602" />
+        <entry key="app/src/main/res/layout/fragment_subject.xml" value="0.335" />
+        <entry key="app/src/main/res/layout/fragment_topic.xml" value="0.32962804617357844" />
+        <entry key="app/src/main/res/layout/fragment_week.xml" value="0.16502778965369816" />
+        <entry key="app/src/main/res/layout/fragment_week_challenge.xml" value="0.32962804617357844" />
         <entry key="app/src/main/res/layout/home_item.xml" value="0.2665457842248413" />
+        <entry key="app/src/main/res/layout/scholarship_item.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/topic_exercise_item.xml" value="0.32877297990594273" />
+        <entry key="app/src/main/res/layout/topic_video_item.xml" value="0.32877297990594273" />
+        <entry key="app/src/main/res/layout/week_item.xml" value="0.45" />
       </map>
     </option>
   </component>
