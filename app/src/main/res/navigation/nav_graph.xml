@@ -62,7 +62,11 @@
         android:id="@+id/challengeFragment"
         android:name="com.lnm011223.lovetolearn.ChallengeFragment"
         android:label="fragment_challenge"
-        tools:layout="@layout/fragment_challenge" />
+        tools:layout="@layout/fragment_challenge" >
+        <action
+            android:id="@+id/action_challengeFragment_to_errorBookFragment"
+            app:destination="@id/errorBookFragment" />
+    </fragment>
     <fragment
         android:id="@+id/scholarshipFragment"
         android:name="com.lnm011223.lovetolearn.ScholarshipFragment"

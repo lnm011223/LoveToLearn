@@ -7,6 +7,8 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
+import androidx.navigation.Navigation
+import androidx.navigation.fragment.FragmentNavigatorExtras
 import androidx.recyclerview.widget.StaggeredGridLayoutManager
 import com.lnm011223.lovetolearn.databinding.FragmentTopicBinding
 
@@ -38,13 +40,37 @@ class TopicFragment : Fragment() {
         val adapter = TopicAdapter(topicList)
         binding.topicRecyclerView.layoutManager = layoutManager
         binding.topicRecyclerView.adapter = adapter
+        binding.topicErrorBookButton.setOnClickListener {
+            val extras = FragmentNavigatorExtras(it to "errorBook")
+            Navigation.findNavController(it)
+                .navigate(R.id.action_topicFragment_to_errorBookFragment, null, null, extras)
+        }
+
+        adapter.setOnItemType(object : ItemType {
+            override fun onItemSelected(view: View, position: Int) {
+                val topic1 = topicList[position]
+                if (topic1.topicType == topic.TYPE_EXERCISE) {
+                    view.transitionName = "exercise"
+                    val extras = FragmentNavigatorExtras(view to "exercise")
+                    Navigation.findNavController(view)
+                        .navigate(R.id.action_topicFragment_to_exerciseFragment, null, null, extras)
+                } else {
+                    view.transitionName = "video"
+                    val extras = FragmentNavigatorExtras(view to "video")
+                    Navigation.findNavController(view)
+                        .navigate(R.id.action_topicFragment_to_videoFragment, null, null, extras)
+                }
+
+            }
+        })
     }
 
     private fun initTopic() {
-        topicList.add(topic("专题1 分数乘整数",topic.TYPE_VIDEO,""))
-        topicList.add(topic("专题1 分数乘整数 跟踪练习",topic.TYPE_EXERCISE,""))
-        topicList.add(topic("专题1 一个数数乘整数",topic.TYPE_VIDEO,""))
-        topicList.add(topic("专题1 一个数数乘整数 跟踪练习",topic.TYPE_EXERCISE,""))
+        topicList.clear()
+        topicList.add(topic("专题1 分数乘整数", topic.TYPE_VIDEO, ""))
+        topicList.add(topic("专题1 分数乘整数 跟踪练习", topic.TYPE_EXERCISE, ""))
+        topicList.add(topic("专题1 一个数数乘整数", topic.TYPE_VIDEO, ""))
+        topicList.add(topic("专题1 一个数数乘整数 跟踪练习", topic.TYPE_EXERCISE, ""))
     }
 
 

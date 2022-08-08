@@ -33,22 +33,51 @@ class TopicAdapter(val topicList: ArrayList<topic>) :
             val view = LayoutInflater.from(parent.context)
                 .inflate(R.layout.topic_exercise_item, parent, false)
             ExerciseViewHolder(view)
+            //val viewHolder = ExerciseViewHolder(view)
+            //val position = viewHolder.adapterPosition
+//            viewHolder.itemView.setOnClickListener {
+//                itemListenter?.bookClick(position)
+//                itemSharedR?.onItemSelected(it)
+//            }
+//            viewHolder
         } else {
             val view = LayoutInflater.from(parent.context)
                 .inflate(R.layout.topic_video_item, parent, false)
             VideoViewHolder(view)
+//            val viewHolder = VideoViewHolder(view)
+//            val position = viewHolder.adapterPosition
+//            viewHolder.itemView.setOnClickListener {
+//                itemListenter?.bookClick(position)
+//                itemSharedR?.onItemSelected(it)
+//            }
+//            viewHolder
         }
 
     override fun onBindViewHolder(holder: RecyclerView.ViewHolder, position: Int) {
         val topic = topicList[position]
-        when(holder) {
+        when (holder) {
             is ExerciseViewHolder -> holder.exerciseName.text = topic.topicName
             is VideoViewHolder -> holder.videoName.text = topic.topicName
             else -> throw IllegalAccessException()
         }
+        holder.itemView.setOnClickListener {
+            itemType?.onItemSelected(it,position)
+        }
     }
 
     override fun getItemCount() = topicList.size
+    private var itemSharedR: ItemSharedR? = null
+    private var itemListenter: ItemListenter? = null
+    private var itemType: ItemType? = null
+    fun setOnItemType(itemType: ItemType?) {
+        this.itemType = itemType
+    }
+    fun setOnItemClickListener(itemListenter: ItemListenter?) {
+        this.itemListenter = itemListenter
+    }
 
+    fun setOnItemSelected(itemSharedR: ItemSharedR?) {
+        this.itemSharedR = itemSharedR
+    }
 
 }

@@ -114,13 +114,39 @@
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/scholarshipRecyclerView"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="0dp"
                 android:layout_marginTop="10dp"
 
+                app:layout_constraintBottom_toTopOf="@+id/lastWeek"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/scholarshipText1" />
 
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/lastWeek"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="上周"
+                android:layout_marginEnd="10dp"
+                app:layout_constraintEnd_toStartOf="@+id/total"
+                app:layout_constraintTop_toTopOf="@+id/total" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/total"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="累计"
+                android:layout_marginEnd="10dp"
+                app:layout_constraintEnd_toStartOf="@+id/pickUp"
+                app:layout_constraintTop_toTopOf="@+id/pickUp" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/pickUp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="领取"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
         </androidx.constraintlayout.widget.ConstraintLayout>
     </com.google.android.material.card.MaterialCardView>
 

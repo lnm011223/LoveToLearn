@@ -20,3 +20,7 @@ interface ItemShared {
 interface ItemSharedR {
     fun onItemSelected(view:View)
 }
+
+interface ItemType {
+    fun onItemSelected(view:View,position: Int,)
+}

@@ -109,6 +109,7 @@
             </com.google.android.material.card.MaterialCardView>
 
             <com.google.android.material.card.MaterialCardView
+                android:transitionName="errorBook"
                 android:id="@+id/errorBookButton"
                 android:layout_width="150dp"
                 android:layout_height="wrap_content"
