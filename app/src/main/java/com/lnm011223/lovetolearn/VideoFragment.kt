@@ -26,5 +26,28 @@ class VideoFragment : Fragment() {
         return binding.root
     }
 
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        var isPlay = false
+        binding.floatingActionButton.setOnClickListener {
+            if (!isPlay) {
+                isPlay = true
+
+                binding.floatingActionButton.apply {
+                    hide()
+                    setImageResource(R.drawable.ic_baseline_pause_24)
+                    show()
+                }
+            }else{
+                isPlay = false
+                binding.floatingActionButton.apply {
+                    hide()
+                    setImageResource(R.drawable.ic_baseline_play_arrow_24)
+                    show()
+                }
+            }
+        }
+    }
+
 
 }

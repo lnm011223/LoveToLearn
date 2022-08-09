@@ -31,7 +31,7 @@
         <entry key="app/src/main/res/layout/fragment_book.xml" value="0.32962804617357844" />
         <entry key="app/src/main/res/layout/fragment_challenge.xml" value="0.32962804617357844" />
         <entry key="app/src/main/res/layout/fragment_error_book.xml" value="0.32962804617357844" />
-        <entry key="app/src/main/res/layout/fragment_exercise.xml" value="0.15416666666666667" />
+        <entry key="app/src/main/res/layout/fragment_exercise.xml" value="0.165" />
         <entry key="app/src/main/res/layout/fragment_home.xml" value="0.25" />
         <entry key="app/src/main/res/layout/fragment_live_answer.xml" value="0.32962804617357844" />
         <entry key="app/src/main/res/layout/fragment_login.xml" value="0.125" />
