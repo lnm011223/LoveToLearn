@@ -35,6 +35,7 @@
         <entry key="app/src/main/res/layout/fragment_home.xml" value="0.25" />
         <entry key="app/src/main/res/layout/fragment_live_answer.xml" value="0.32962804617357844" />
         <entry key="app/src/main/res/layout/fragment_login.xml" value="0.125" />
+        <entry key="app/src/main/res/layout/fragment_result.xml" value="0.165" />
         <entry key="app/src/main/res/layout/fragment_scholarship.xml" value="0.25" />
         <entry key="app/src/main/res/layout/fragment_signup.xml" value="0.3172295852928602" />
         <entry key="app/src/main/res/layout/fragment_subject.xml" value="0.335" />
@@ -43,10 +44,12 @@
         <entry key="app/src/main/res/layout/fragment_week.xml" value="0.16502778965369816" />
         <entry key="app/src/main/res/layout/fragment_week_challenge.xml" value="0.32962804617357844" />
         <entry key="app/src/main/res/layout/home_item.xml" value="0.2665457842248413" />
+        <entry key="app/src/main/res/layout/result_item.xml" value="0.20026041666666666" />
         <entry key="app/src/main/res/layout/scholarship_item.xml" value="0.25" />
         <entry key="app/src/main/res/layout/topic_exercise_item.xml" value="0.32877297990594273" />
         <entry key="app/src/main/res/layout/topic_video_item.xml" value="0.32877297990594273" />
         <entry key="app/src/main/res/layout/week_item.xml" value="0.45" />
+        <entry key="app/src/main/res/xml/network_security_config.xml" value="0.20078125" />
       </map>
     </option>
   </component>
