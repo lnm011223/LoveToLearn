@@ -14,5 +14,5 @@ class MainViewModel: ViewModel() {
     var book = ""
     var week = ""
     var isChallenge = 1
-    lateinit var challenge : challenge
+    lateinit var challenge : Challenge
 }

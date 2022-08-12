@@ -2,16 +2,12 @@ package com.lnm011223.lovetolearn
 
 import android.content.res.ColorStateList
 import android.graphics.Color
-import android.graphics.Color.red
-import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.cardview.widget.CardView
-import androidx.core.content.ContextCompat
-import androidx.navigation.Navigation
 import androidx.recyclerview.widget.RecyclerView
 
 /**
@@ -20,7 +16,7 @@ import androidx.recyclerview.widget.RecyclerView
  * @Date 2022/8/1-4:14 下午
 
  */
-class ChallengeAdapter(val challengelist: ArrayList<challenge>) :
+class ChallengeAdapter(val challengelist: ArrayList<Challenge>) :
     RecyclerView.Adapter<ChallengeAdapter.ViewHolder>() {
     inner class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
         val challengeName: TextView = view.findViewById(R.id.challengeName)
@@ -38,7 +34,7 @@ class ChallengeAdapter(val challengelist: ArrayList<challenge>) :
             itemListenter?.bookClick(position)
             itemSharedR?.onItemSelected(it)
 //            val bundle = Bundle()
-//            bundle.putParcelable("challenge",challengelist[position])
+//            bundle.putParcelable("Challenge",challengelist[position])
             //Navigation.findNavController(it).navigate(R.id.action_weekChallengeFragment_to_challengeFragment)
 
         }

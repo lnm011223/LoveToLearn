@@ -58,8 +58,8 @@ class WeekFragment : Fragment() {
         )
         adapter.setOnItemSelected(object : ItemSharedR{
             override fun onItemSelected(view: View) {
-                view.transitionName = "topic"
-                val extras = FragmentNavigatorExtras(view to "topic")
+                view.transitionName = "Topic"
+                val extras = FragmentNavigatorExtras(view to "Topic")
                 Navigation.findNavController(view).navigate(R.id.action_weekFragment_to_topicFragment,null,null,extras)
             }
 

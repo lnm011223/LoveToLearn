@@ -12,7 +12,7 @@ import androidx.recyclerview.widget.RecyclerView
  * @Date 2022/8/6-4:30 下午
 
  */
-class TopicAdapter(val topicList: ArrayList<topic>) :
+class TopicAdapter(val topicList: ArrayList<Topic>) :
     RecyclerView.Adapter<RecyclerView.ViewHolder>() {
 
     inner class ExerciseViewHolder(view: View) : RecyclerView.ViewHolder(view) {
@@ -29,7 +29,7 @@ class TopicAdapter(val topicList: ArrayList<topic>) :
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int) =
-        if (viewType == topic.TYPE_EXERCISE) {
+        if (viewType == Topic.TYPE_EXERCISE) {
             val view = LayoutInflater.from(parent.context)
                 .inflate(R.layout.topic_exercise_item, parent, false)
             ExerciseViewHolder(view)

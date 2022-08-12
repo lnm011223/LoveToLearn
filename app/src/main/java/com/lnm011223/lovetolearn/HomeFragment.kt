@@ -51,7 +51,7 @@ class HomeFragment : Fragment() {
                 .navigate(R.id.action_homeFragment_to_bookFragment, null, null, extras)
         }
         binding.scholarshipButton.setOnClickListener {
-            val extras = FragmentNavigatorExtras(it to "scholarship")
+            val extras = FragmentNavigatorExtras(it to "Scholarship")
             Navigation.findNavController(it)
                 .navigate(R.id.action_homeFragment_to_scholarshipFragment,null,null,extras)
         }

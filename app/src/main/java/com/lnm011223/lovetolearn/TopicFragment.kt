@@ -16,7 +16,7 @@ import com.lnm011223.lovetolearn.databinding.FragmentTopicBinding
 class TopicFragment : Fragment() {
     private lateinit var binding: FragmentTopicBinding
     private lateinit var mainViewModel: MainViewModel
-    private val topicList = ArrayList<topic>()
+    private val topicList = ArrayList<Topic>()
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         sharedElementEnterTransition = TransitionInflater.from(requireContext())
@@ -49,7 +49,7 @@ class TopicFragment : Fragment() {
         adapter.setOnItemType(object : ItemType {
             override fun onItemSelected(view: View, position: Int) {
                 val topic1 = topicList[position]
-                if (topic1.topicType == topic.TYPE_EXERCISE) {
+                if (topic1.topicType == Topic.TYPE_EXERCISE) {
                     view.transitionName = "exercise"
                     val extras = FragmentNavigatorExtras(view to "exercise")
                     Navigation.findNavController(view)
@@ -67,10 +67,10 @@ class TopicFragment : Fragment() {
 
     private fun initTopic() {
         topicList.clear()
-        topicList.add(topic("专题1 分数乘整数", topic.TYPE_VIDEO, ""))
-        topicList.add(topic("专题1 分数乘整数 跟踪练习", topic.TYPE_EXERCISE, ""))
-        topicList.add(topic("专题1 一个数数乘整数", topic.TYPE_VIDEO, ""))
-        topicList.add(topic("专题1 一个数数乘整数 跟踪练习", topic.TYPE_EXERCISE, ""))
+        topicList.add(Topic("专题1 分数乘整数", Topic.TYPE_VIDEO, ""))
+        topicList.add(Topic("专题1 分数乘整数 跟踪练习", Topic.TYPE_EXERCISE, ""))
+        topicList.add(Topic("专题1 一个数数乘整数", Topic.TYPE_VIDEO, ""))
+        topicList.add(Topic("专题1 一个数数乘整数 跟踪练习", Topic.TYPE_EXERCISE, ""))
     }
 
 

@@ -17,7 +17,7 @@ import com.lnm011223.lovetolearn.databinding.FragmentWeekChallengeBinding
 class weekChallengeFragment : Fragment() {
     private lateinit var binding: FragmentWeekChallengeBinding
     private lateinit var mainViewModel: MainViewModel
-    private lateinit var challengeList: ArrayList<challenge>
+    private lateinit var challengeList: ArrayList<Challenge>
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         sharedElementEnterTransition = TransitionInflater.from(requireContext())
@@ -54,8 +54,8 @@ class weekChallengeFragment : Fragment() {
         )
         adapter.setOnItemSelected(object : ItemSharedR{
             override fun onItemSelected(view: View) {
-                view.transitionName = "challenge"
-                val extras = FragmentNavigatorExtras(view to "challenge")
+                view.transitionName = "Challenge"
+                val extras = FragmentNavigatorExtras(view to "Challenge")
                 Navigation.findNavController(view).navigate(R.id.action_weekChallengeFragment_to_challengeFragment,null,null,extras)
             }
 
@@ -66,9 +66,9 @@ class weekChallengeFragment : Fragment() {
         challengeList = arrayListOf()
         for (num in 1..20) {
             if (num%2 == 0){
-                challengeList.add(challenge("第${num}周",0))
+                challengeList.add(Challenge("第${num}周",0))
             }else{
-                challengeList.add(challenge("第${num}周",1))
+                challengeList.add(Challenge("第${num}周",1))
             }
         }
     }

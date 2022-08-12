@@ -12,7 +12,7 @@ import androidx.recyclerview.widget.RecyclerView
  * @Date 2022/8/1-4:14 下午
 
  */
-class ScholarshipAdapter(val sholarshiplist: ArrayList<scholarship>) :
+class ScholarshipAdapter(val sholarshiplist: ArrayList<Scholarship>) :
     RecyclerView.Adapter<ScholarshipAdapter.ViewHolder>() {
 
 

@@ -11,7 +11,7 @@ import com.lnm011223.lovetolearn.databinding.FragmentScholarshipBinding
 
 class ScholarshipFragment : Fragment() {
     private lateinit var binding: FragmentScholarshipBinding
-    private var scholarshipList = arrayListOf<scholarship>()
+    private var scholarshipList = arrayListOf<Scholarship>()
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         sharedElementEnterTransition = TransitionInflater.from(requireContext())
@@ -36,9 +36,9 @@ class ScholarshipFragment : Fragment() {
     }
 
     private fun initScholar() {
-        scholarshipList.add(scholarship("1","121.0","1","48.5","1","166.1"))
-        scholarshipList.add(scholarship("2","98.2","2","36.8","2","160.4"))
-        scholarshipList.add(scholarship("3","85.8","3","37.2","3","159.2"))
-        scholarshipList.add(scholarship("4","85.1","4","26.4","4","157.3"))
+        scholarshipList.add(Scholarship("1","121.0","1","48.5","1","166.1"))
+        scholarshipList.add(Scholarship("2","98.2","2","36.8","2","160.4"))
+        scholarshipList.add(Scholarship("3","85.8","3","37.2","3","159.2"))
+        scholarshipList.add(Scholarship("4","85.1","4","26.4","4","157.3"))
     }
 }
