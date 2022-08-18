@@ -34,6 +34,10 @@ class ChallengeFragment : Fragment() {
             val extras = FragmentNavigatorExtras(it to "errorBook")
             Navigation.findNavController(it).navigate(R.id.action_challengeFragment_to_errorBookFragment,null,null,extras)
         }
+        binding.onlyExerciseButton.setOnClickListener {
+            val extras = FragmentNavigatorExtras(it to "exercise")
+            Navigation.findNavController(it).navigate(R.id.action_challengeFragment_to_exerciseFragment,null,null,extras)
+        }
     }
 
 

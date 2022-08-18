@@ -2,16 +2,20 @@ package com.lnm011223.lovetolearn
 
 import android.content.Context
 import android.graphics.Color
+import android.text.style.ForegroundColorSpan
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.LinearLayout
 import android.widget.TextView
+import androidx.core.text.bold
+import androidx.core.text.buildSpannedString
+import androidx.core.text.inSpans
+import androidx.core.text.italic
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.google.android.material.card.MaterialCardView
-
 
 
 /**
@@ -20,7 +24,7 @@ import com.google.android.material.card.MaterialCardView
  * @Date 2022/8/10-10:55 下午
 
  */
-class ResultAdapter(val resultList: ArrayList<Title>,val context: Context) :
+class ResultAdapter(val resultList: ArrayList<Title>, val context: Context) :
     RecyclerView.Adapter<ResultAdapter.ViewHolder>() {
     inner class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
         val titleImg: ImageView = view.findViewById(R.id.titleResultImg)
@@ -50,21 +54,50 @@ class ResultAdapter(val resultList: ArrayList<Title>,val context: Context) :
         val answer = result.answer.split(",")
         var ddd = ""
         var answerFlag = 0
-        for (i in yes) {
-            var flag = 0
+//        for (i in yes) {
+//            var flag = 0
+//
+//            for (j in i) {
+//                flag++
+//                ddd += j
+//                if (flag != i.size && answerFlag != answer.size) {
+//
+//                    ddd += answer[answerFlag]
+//                    answerFlag++
+//                }
+//            }
+//            ddd += "\n"
+//        }
+//        holder.resultText.text = ddd
+        holder.resultText.text = buildSpannedString {
+            for (i in yes) {
+                var flag = 0
 
-            for (j in i) {
-                flag++
-                ddd += j
-                if (flag != i.size && answerFlag != answer.size) {
+                for (j in i) {
+                    flag++
+                    append(j)
+//                    ddd += j
+                    if (flag != i.size && answerFlag != answer.size) {
 
-                    ddd += answer[answerFlag]
-                    answerFlag++
+
+//                        ddd += answer[answerFlag]
+                        inSpans(ForegroundColorSpan(Color.parseColor("#008BF8"))) {
+                             italic{ // 设置斜体
+                                 bold {
+                                     append(answer[answerFlag])
+                                     answerFlag++
+                                 }
+
+                            }
+                        }
+                    }
                 }
+//                ddd += "\n"
+                append("\n")
+
             }
-            ddd += "\n"
+//            append(ddd)
         }
-        holder.resultText.text = ddd
         Glide.with(context).load(result.imgUrl).into(holder.titleImg)
 
 

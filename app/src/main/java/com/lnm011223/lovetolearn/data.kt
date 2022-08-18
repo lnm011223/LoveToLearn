@@ -1,5 +1,8 @@
 package com.lnm011223.lovetolearn
 
+import android.os.Parcelable
+import kotlinx.parcelize.Parcelize
+
 /**
 
  * @Author liangnuoming
@@ -24,5 +27,40 @@ class Scholarship(
     val scholarship3: String
 )
 
+@Parcelize
+class Title(
+    val title: String,
+    val answer: String,
+    val isRight: Int,
+    val imgUrl: String,
+    val score: Int
+) : Parcelable
 
-class Title(val title:String, val answer:String, val isRight: Int,val imgUrl:String)
+class MoreTitle(
+    val title: String,
+    val answer: String,
+    val isRight: Int,
+    val imgUrl: String,
+    val score: Int,
+    val videoUrl: String
+)
+
+
+fun main() {
+    val array1 = arrayListOf<String>("1", "2", "3", "4")
+    val array2 = arrayListOf<String>("1", "3", "3", "9")
+
+    println(getAnswerErrorItem(array1,array2))
+
+}
+
+
+fun getAnswerErrorItem(array1: ArrayList<String>, array2: ArrayList<String>): ArrayList<Int> {
+    val array3 = arrayListOf<Int>()
+    for (i in 0 until array1.size) {
+        if (array1[i] != array2[i]) {
+            array3.add(i)
+        }
+    }
+    return array3
+}

@@ -18,7 +18,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:strokeColor="#9E0031"
+        app:strokeColor="#EF626C"
         app:strokeWidth="2dp">
 
         <LinearLayout
@@ -26,7 +26,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:padding="10dp">
+            android:padding="10dp"
+            android:layout_margin="10dp">
             <ImageView
                 android:id="@+id/titleResultImg"
                 android:layout_width="wrap_content"

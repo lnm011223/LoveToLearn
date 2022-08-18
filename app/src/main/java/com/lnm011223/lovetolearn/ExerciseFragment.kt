@@ -18,7 +18,8 @@ import com.lnm011223.lovetolearn.databinding.FragmentExerciseBinding
 
 class ExerciseFragment : Fragment() {
     private lateinit var binding: FragmentExerciseBinding
-
+    private var titleList = arrayListOf<Title>()
+    private var flag1 = 0
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         sharedElementEnterTransition = TransitionInflater.from(requireContext())
@@ -34,25 +35,19 @@ class ExerciseFragment : Fragment() {
         return binding.root
     }
 
+
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        initTitleList()
+        binding.allNumText.text = titleList.size.toString()
 
-            Glide.with(this)
-                .load("http://116.205.143.169/zhrd/3")
-                .into(binding.titleImg)
+        Glide.with(this)
+            .load("http://116.205.143.169/zhrd/3")
+            .into(binding.titleImg)
 
         //用竖直方向LinearLayout当底，每一行用一个横向的LinearLayout addView内容
 
-
-//        val test = "6. 在括号里填上适当的数。（6分）\n" +
-//                "10.2平方千米=(input)公顷        \n" +
-//                "6.05kg=(input)kg(input)g　　\n" +
-//                "6吨40千克=(input)吨             \n" +
-//                "12.5平方米=(input)平方米(input)平方分米\n"
-        val test = "31. （填空）某小学四年级各班参加植树活动的人数如下图，endl根据图中信息填空。（6分）endl" +
-                "（1）参加人数最多的是四（input）班，最少的是四（input）班。endl" +
-                "（2）一共有（input）人参加植树，其中男生（input）人，女生（input）人。endl" +
-                "（3）已知一共栽了339棵树，平均每人栽（input）棵。endl"
+        val test = titleList[0].title
         val yes = titleSplit(test)
 
 
@@ -87,12 +82,124 @@ class ExerciseFragment : Fragment() {
             }
             Toast.makeText(context, result, Toast.LENGTH_SHORT).show()
             val extras = FragmentNavigatorExtras(it to "result")
-            Navigation.findNavController(it).navigate(R.id.action_exerciseFragment_to_resultFragment,null,null,extras)
+            Navigation.findNavController(it)
+                .navigate(R.id.action_exerciseFragment_to_resultFragment, null, null, extras)
+        }
+        binding.lastButton.setOnClickListener {
+            Toast.makeText(context, flag1.toString(), Toast.LENGTH_SHORT).show()
+            if (flag1 >= 1) {
+                flag1--
+                binding.titleBg.removeAllViews()
+
+                Glide.with(this)
+                    .load(titleList[flag1].imgUrl)
+                    .into(binding.titleImg)
+
+                //用竖直方向LinearLayout当底，每一行用一个横向的LinearLayout addView内容
+
+                val test = titleList[flag1].title
+                val yes = titleSplit(test)
+
+
+                var editList = ArrayList<EditText>()
+                for (i in yes) {
+                    val linearLayout = LinearLayout(context)
+                    var flag = 0
+                    for (j in i) {
+                        flag++
+                        val textView = TextView(context)
+                        textView.text = j
+                        linearLayout.addView(textView)
+                        if (flag != i.size) {
+                            val editText = EditText(context)
+                            editList.add(editText)
+                            linearLayout.addView(editText)
+                        }
+                    }
+
+                    binding.titleBg.addView(linearLayout)
+                }
+                binding.nowNumText.text = (flag1 + 1).toString()
+            }
+        }
+        binding.nextButton.setOnClickListener {
+            Toast.makeText(context, flag1.toString(), Toast.LENGTH_SHORT).show()
+            if (flag1 < titleList.size - 1) {
+                flag1++
+                binding.titleBg.removeAllViews()
+
+                Glide.with(this)
+                    .load(titleList[flag1].imgUrl)
+                    .into(binding.titleImg)
+
+                //用竖直方向LinearLayout当底，每一行用一个横向的LinearLayout addView内容
+
+                val test = titleList[flag1].title
+                val yes = titleSplit(test)
+
+
+                var editList = ArrayList<EditText>()
+                for (i in yes) {
+                    val linearLayout = LinearLayout(context)
+                    var flag = 0
+                    for (j in i) {
+                        flag++
+                        val textView = TextView(context)
+                        textView.text = j
+                        linearLayout.addView(textView)
+                        if (flag != i.size) {
+                            val editText = EditText(context)
+                            editList.add(editText)
+                            linearLayout.addView(editText)
+                        }
+                    }
+
+                    binding.titleBg.addView(linearLayout)
+                }
+                binding.nowNumText.text = (flag1 + 1).toString()
+            }
         }
 
 
     }
 
+    private fun initTitleList() {
+        titleList.clear()
+        titleList.add(
+            Title(
+                "31. （填空）某小学四年级各班参加植树活动的人数如下图，endl根据图中信息填空。（6分）endl" +
+                        "（1）参加人数最多的是四（input）班，最少的是四（input）班。endl" +
+                        "（2）一共有（input）人参加植树，其中男生（input）人，女生（input）人。endl" +
+                        "（3）已知一共栽了339棵树，平均每人栽（input）棵。endl",
+                "1,2,3,4,5,6",
+                0,
+                "http://116.205.143.169/zhrd/3",
+                4
+            )
+        )
+        titleList.add(
+            Title(
+                "29. （填空）电影院的电影票分甲等和乙等两种，甲等票每张售30元，乙等票每张endl" +
+                        "售20元，学校买回14张电影票共用了360元。学校买了甲等票(input)张和乙等endl" +
+                        "票(input)张。（4分)",
+                "1,2",
+                0,
+                "",
+                4
+            )
+        )
+        titleList.add(
+            Title(
+                "27. （选择）妈妈带了100元去超市购物。她先买了36.5元的水果，又买了23.5元endl" +
+                        "的生活用品，绿豆每千克12.8元，妈妈剩下的钱够买3千克的绿豆吗?（input）（3分）endl" +
+                        "A  够                            B  不够",
+                "1,2",
+                0,
+                "",
+                3
+            )
+        )
+    }
 
     private fun titleSplit(text: String): ArrayList<List<String>> {
 

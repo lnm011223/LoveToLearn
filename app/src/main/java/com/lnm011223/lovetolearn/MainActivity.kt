@@ -22,6 +22,8 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
         window.statusBarColor = Color.TRANSPARENT
         setLightStatusBar()
+        val dbHelper = MyDatabaseHelper(this,"LoveToLearn.db",1)
+        dbHelper.writableDatabase
     }
     @RequiresApi(Build.VERSION_CODES.M)
     private fun setBgImageByResource(imageResource: Int) {
