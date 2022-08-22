@@ -14,6 +14,7 @@ import android.widget.Toast
 import androidx.core.widget.addTextChangedListener
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
+import androidx.navigation.Navigation
 import androidx.navigation.fragment.FragmentNavigatorExtras
 import com.bumptech.glide.Glide
 import com.lnm011223.lovetolearn.databinding.FragmentExerciseBinding
@@ -79,21 +80,20 @@ class ExerciseFragment : Fragment() {
         }
         getAnswers()
         binding.completeButton.setOnClickListener {
-            var result = ""
-            var flag = 0
-            for (i in editList) {
-                flag++
-                if (flag != editList.size) {
-                    result += "${i.text},"
-                } else {
-                    result += "${i.text}"
-                }
-            }
+//            var result = ""
+//            var flag = 0
+//            for (i in editList) {
+//                flag++
+//                if (flag != editList.size) {
+//                    result += "${i.text},"
+//                } else {
+//                    result += "${i.text}"
+//                }
+//            }
             timer?.cancel()
-            Toast.makeText(context, result, Toast.LENGTH_SHORT).show()
             val extras = FragmentNavigatorExtras(it to "result")
-//            Navigation.findNavController(it)
-//                .navigate(R.id.action_exerciseFragment_to_resultFragment, null, null, extras)
+            Navigation.findNavController(it)
+                .navigate(R.id.action_exerciseFragment_to_resultFragment, null, null, extras)
         }
         binding.lastButton.setOnClickListener {
             Toast.makeText(context, flag1.toString(), Toast.LENGTH_SHORT).show()
@@ -191,9 +191,12 @@ class ExerciseFragment : Fragment() {
                     }
                 }
 //                Toast.makeText(context, result, Toast.LENGTH_SHORT).show()
-                if (realResult == titleList[flag1].answer) {
+                if (result == titleList[flag1].answer) {
                     titleList[flag1].isRight = 1
+                }else{
+                    titleList[flag1].isRight = 0
                 }
+                //Toast.makeText(context, "${titleList[flag1].isRight}", Toast.LENGTH_SHORT).show()
             }
 
         }
