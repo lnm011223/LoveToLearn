@@ -6,11 +6,13 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.StaggeredGridLayoutManager
 import com.lnm011223.lovetolearn.databinding.FragmentResultBinding
 
 
 class ResultFragment : Fragment() {
+    private lateinit var mainViewModel: MainViewModel
     private lateinit var binding: FragmentResultBinding
     private var resultList = arrayListOf<Title>()
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -29,6 +31,7 @@ class ResultFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        mainViewModel = ViewModelProvider(requireActivity()).get(MainViewModel::class.java)
         initResult()
         val layoutManager = StaggeredGridLayoutManager(1, StaggeredGridLayoutManager.VERTICAL)
         val adapter = context?.let { ResultAdapter(resultList, it) }

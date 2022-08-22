@@ -29,6 +29,7 @@
         <entry key="app/src/main/res/layout/book_item.xml" value="0.32877297990594273" />
         <entry key="app/src/main/res/layout/challenge_item.xml" value="0.32877297990594273" />
         <entry key="app/src/main/res/layout/errorBook_item.xml" value="0.20078125" />
+        <entry key="app/src/main/res/layout/errorbook_item.xml" value="0.20078125" />
         <entry key="app/src/main/res/layout/fragment_book.xml" value="0.32962804617357844" />
         <entry key="app/src/main/res/layout/fragment_challenge.xml" value="0.32962804617357844" />
         <entry key="app/src/main/res/layout/fragment_error_book.xml" value="0.15709046454767725" />

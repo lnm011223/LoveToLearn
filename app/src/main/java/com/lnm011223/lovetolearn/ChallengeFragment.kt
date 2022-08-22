@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.Navigation
 import androidx.navigation.fragment.FragmentNavigatorExtras
 import com.lnm011223.lovetolearn.databinding.FragmentChallengeBinding
@@ -13,6 +14,7 @@ import com.lnm011223.lovetolearn.databinding.FragmentChallengeBinding
 
 class ChallengeFragment : Fragment() {
     private lateinit var binding: FragmentChallengeBinding
+    private lateinit var mainViewModel: MainViewModel
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         sharedElementEnterTransition = TransitionInflater.from(requireContext())
@@ -30,6 +32,7 @@ class ChallengeFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        mainViewModel = ViewModelProvider(requireActivity()).get(MainViewModel::class.java)
         binding.errorBookButton.setOnClickListener {
             val extras = FragmentNavigatorExtras(it to "errorBook")
             Navigation.findNavController(it).navigate(R.id.action_challengeFragment_to_errorBookFragment,null,null,extras)

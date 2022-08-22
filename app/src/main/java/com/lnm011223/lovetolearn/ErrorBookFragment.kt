@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.StaggeredGridLayoutManager
 import com.lnm011223.lovetolearn.databinding.FragmentErrorBookBinding
 
@@ -14,6 +15,7 @@ class ErrorBookFragment : Fragment() {
     private lateinit var binding: FragmentErrorBookBinding
 //    val dbHelper = MyDatabaseHelper(requireActivity(), "LoveToLearn.db", 1)
 //    val db = dbHelper.writableDatabase
+    private lateinit var mainViewModel: MainViewModel
     private var errorList = arrayListOf<MoreTitle>()
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -32,6 +34,7 @@ class ErrorBookFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        mainViewModel = ViewModelProvider(requireActivity()).get(MainViewModel::class.java)
         initErrorList()
         val layoutManager = StaggeredGridLayoutManager(1, StaggeredGridLayoutManager.VERTICAL)
         val adapter = context?.let { ErrorBookAdapter(errorList, it) }

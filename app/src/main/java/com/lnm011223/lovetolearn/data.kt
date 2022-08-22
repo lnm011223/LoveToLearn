@@ -31,7 +31,7 @@ class Scholarship(
 class Title(
     val title: String,
     val answer: String,
-    val isRight: Int,
+    var isRight: Int,
     val imgUrl: String,
     val score: Int
 ) : Parcelable

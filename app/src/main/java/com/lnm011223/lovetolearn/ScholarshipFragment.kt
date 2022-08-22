@@ -6,10 +6,12 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.StaggeredGridLayoutManager
 import com.lnm011223.lovetolearn.databinding.FragmentScholarshipBinding
 
 class ScholarshipFragment : Fragment() {
+    private lateinit var mainViewModel: MainViewModel
     private lateinit var binding: FragmentScholarshipBinding
     private var scholarshipList = arrayListOf<Scholarship>()
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -28,6 +30,7 @@ class ScholarshipFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        mainViewModel = ViewModelProvider(requireActivity()).get(MainViewModel::class.java)
         initScholar()
         val layoutManager = StaggeredGridLayoutManager(1, StaggeredGridLayoutManager.VERTICAL)
         val adapter = ScholarshipAdapter(scholarshipList)

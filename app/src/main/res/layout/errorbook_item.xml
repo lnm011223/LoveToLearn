@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
 
@@ -46,7 +45,7 @@
                 android:id="@+id/errorText"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-               android:layout_marginTop="10dp"
+                android:layout_marginTop="10dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.498"
                 app:layout_constraintStart_toStartOf="parent"
@@ -54,12 +53,12 @@
 
             <androidx.appcompat.widget.AppCompatEditText
                 android:id="@+id/answerInput"
-                android:layout_marginStart="5dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                app:layout_constraintBaseline_toBaselineOf="@id/textView"
                 app:layout_constraintStart_toEndOf="@+id/textView"
-                app:layout_constraintTop_toTopOf="@+id/textView"
-                app:layout_constraintBaseline_toBaselineOf="@id/textView"/>
+                app:layout_constraintTop_toTopOf="@+id/textView" />
 
             <TextView
                 android:id="@+id/textView"
@@ -73,8 +72,8 @@
                 android:id="@+id/showBtn"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="查看答案"
                 android:layout_marginEnd="10dp"
+                android:text="查看答案"
                 app:layout_constraintBottom_toBottomOf="@+id/videoBtn"
                 app:layout_constraintEnd_toStartOf="@+id/videoBtn"
                 app:layout_constraintTop_toTopOf="@+id/videoBtn" />
