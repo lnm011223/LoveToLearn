@@ -45,7 +45,7 @@ class ExerciseFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         mainViewModel = ViewModelProvider(requireActivity()).get(MainViewModel::class.java)
-        getCountDownTime()
+//        getCountDownTime()
         initTitleList()
 
         binding.allNumText.text = titleList.size.toString()
@@ -90,7 +90,7 @@ class ExerciseFragment : Fragment() {
 //                    result += "${i.text}"
 //                }
 //            }
-            timer?.cancel()
+//            timer?.cancel()
             val bundle = Bundle()
             bundle.putParcelableArrayList("resultList",titleList)
             val extras = FragmentNavigatorExtras(it to "result")
@@ -258,44 +258,44 @@ class ExerciseFragment : Fragment() {
         return complete
     }
 
-    private var timer: CountDownTimer? = null
-    private fun getCountDownTime() {
-        var timeStemp = 63 * 1000
-        timer = object : CountDownTimer(timeStemp!!.toLong(), 1000) {
-
-            override fun onTick(l: Long) {
-                //val day = l / (1000 * 24 * 60 * 60) //单位天
-                //val hour = (l - day * (1000 * 24 * 60 * 60)) / (1000 * 60 * 60) //单位时
-                //val minute =
-                //    (l - day * (1000 * 24 * 60 * 60) - hour * (1000 * 60 * 60)) / (1000 * 60) //单位分
-                //val second =
-                //    (l - day * (1000 * 24 * 60 * 60) - hour * (1000 * 60 * 60) - minute * (1000 * 60)) / 1000 //单位秒
-
-                val minute = l / (60 * 1000)
-                val second = (l - minute * (60 * 1000)) / 1000
-
-                timeStemp = l.toInt()
-                binding.timeText.text =
-                    "${String.format("%02d", minute)}:${String.format("%02d", second)}"
-                //Toast.makeText(context,"${String.format("%02d", minute)}:${String.format("%02d", second)}",Toast.LENGTH_SHORT).show()
-
-            }
-
-            override fun onFinish() {
-                binding.timeText.text = "时间结束！"
-                binding.timeText.setTextColor(Color.parseColor("#DF2935"))
-                //倒计时为0时执行此方法
-                Toast.makeText(context, "时间结束！", Toast.LENGTH_SHORT).show()
-
-            }
-        }
-        (timer as CountDownTimer).start()
-    }
+//    private var timer: CountDownTimer? = null
+//    private fun getCountDownTime() {
+//        var timeStemp = 63 * 1000
+//        timer = object : CountDownTimer(timeStemp!!.toLong(), 1000) {
+//
+//            override fun onTick(l: Long) {
+//                //val day = l / (1000 * 24 * 60 * 60) //单位天
+//                //val hour = (l - day * (1000 * 24 * 60 * 60)) / (1000 * 60 * 60) //单位时
+//                //val minute =
+//                //    (l - day * (1000 * 24 * 60 * 60) - hour * (1000 * 60 * 60)) / (1000 * 60) //单位分
+//                //val second =
+//                //    (l - day * (1000 * 24 * 60 * 60) - hour * (1000 * 60 * 60) - minute * (1000 * 60)) / 1000 //单位秒
+//
+//                val minute = l / (60 * 1000)
+//                val second = (l - minute * (60 * 1000)) / 1000
+//
+//                timeStemp = l.toInt()
+//                binding.timeText.text =
+//                    "${String.format("%02d", minute)}:${String.format("%02d", second)}"
+//                //Toast.makeText(context,"${String.format("%02d", minute)}:${String.format("%02d", second)}",Toast.LENGTH_SHORT).show()
+//
+//            }
+//
+//            override fun onFinish() {
+//                binding.timeText.text = "时间结束！"
+//                binding.timeText.setTextColor(Color.parseColor("#DF2935"))
+//                //倒计时为0时执行此方法
+//                Toast.makeText(context, "时间结束！", Toast.LENGTH_SHORT).show()
+//
+//            }
+//        }
+//        (timer as CountDownTimer).start()
+//    }
 
     override fun onDestroy() {
         super.onDestroy()
 
-        timer?.cancel()
+//        timer?.cancel()
     }
 
 }

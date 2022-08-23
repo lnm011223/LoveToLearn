@@ -3,8 +3,17 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/errorBookFragment">
+    app:startDestination="@id/exerciseFragment">
 
+    <fragment
+        android:id="@+id/exerciseFragment2"
+        android:name="com.lnm011223.lovetolearn.ExerciseFragment"
+        android:label="fragment_exercise"
+        tools:layout="@layout/fragment_exercise">
+        <action
+            android:id="@+id/action_exerciseFragment2_to_resultFragment2"
+            app:destination="@id/resultFragment2" />
+    </fragment>
     <fragment
         android:id="@+id/loginFragment"
         android:name="com.lnm011223.lovetolearn.LoginFragment"
@@ -64,11 +73,11 @@
         android:label="fragment_challenge"
         tools:layout="@layout/fragment_challenge" >
         <action
-            android:id="@+id/action_challengeFragment_to_errorBookFragment"
-            app:destination="@id/errorBookFragment" />
+            android:id="@+id/action_challengeFragment_to_exerciseFragment2"
+            app:destination="@id/exerciseFragment2" />
         <action
-            android:id="@+id/action_challengeFragment_to_exerciseFragment"
-            app:destination="@id/exerciseFragment" />
+            android:id="@+id/action_challengeFragment_to_errorBookFragment2"
+            app:destination="@id/errorBookFragment2" />
     </fragment>
     <fragment
         android:id="@+id/scholarshipFragment"
@@ -130,6 +139,15 @@
             app:destination="@id/videoFragment" />
     </fragment>
     <fragment
+        android:id="@+id/errorBookFragment2"
+        android:name="com.lnm011223.lovetolearn.ErrorBookFragment"
+        android:label="fragment_error_book"
+        tools:layout="@layout/fragment_error_book">
+        <action
+            android:id="@+id/action_errorBookFragment2_to_videoFragment"
+            app:destination="@id/videoFragment" />
+    </fragment>
+    <fragment
         android:id="@+id/videoFragment"
         android:name="com.lnm011223.lovetolearn.VideoFragment"
         android:label="fragment_video"
@@ -148,4 +166,13 @@
         android:name="com.lnm011223.lovetolearn.ResultFragment"
         android:label="fragment_result"
         tools:layout="@layout/fragment_result" />
+    <fragment
+        android:id="@+id/resultFragment2"
+        android:name="com.lnm011223.lovetolearn.ResultFragment"
+        android:label="fragment_result"
+        tools:layout="@layout/fragment_result" >
+        <action
+            android:id="@+id/action_resultFragment2_to_videoFragment"
+            app:destination="@id/videoFragment" />
+    </fragment>
 </navigation>

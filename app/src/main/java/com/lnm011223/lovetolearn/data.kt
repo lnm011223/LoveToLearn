@@ -47,10 +47,7 @@ class MoreTitle(
 
 
 fun main() {
-    val array1 = arrayListOf<String>("1", "2", "3", "4")
-    val array2 = arrayListOf<String>("1", "3", "3", "9")
 
-    println(getAnswerErrorItem(array1,array2))
 
 }
 

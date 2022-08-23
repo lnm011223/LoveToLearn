@@ -5,7 +5,6 @@ import android.transition.TransitionInflater
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.StaggeredGridLayoutManager
@@ -36,12 +35,19 @@ class ResultFragment : Fragment() {
 //        initResult()
         resultList = arguments?.get("resultList") as ArrayList<Title>
         var score = 0
+
         for (i in resultList) {
             if (i.isRight == 1) {
                 score += i.score
             }
         }
-
+        binding.commentText.text = when (score) {
+            in 96..100 -> "宝贝真棒! 继续保持，你是最棒的！"
+            in 85..95 -> "宝贝很棒! 你很优秀，但是还是要加油哦，棒棒的！"
+            in 75..84 -> "很好! 再接再厉，更进一步，加油！"
+            in 60..74 -> "不错! 坚持学习，力争上游，加油！"
+            else -> "下次要努力哦！争取更大的进步。"
+        }
         binding.scoreText.text = "$score 分"
         val layoutManager = StaggeredGridLayoutManager(1, StaggeredGridLayoutManager.VERTICAL)
         val adapter = context?.let { ResultAdapter(resultList, it) }

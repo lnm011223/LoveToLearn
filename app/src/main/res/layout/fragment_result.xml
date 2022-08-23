@@ -50,7 +50,7 @@
                 app:layout_constraintTop_toTopOf="@+id/appCompatTextView" />
 
             <androidx.appcompat.widget.AppCompatTextView
-                android:id="@+id/appCompatTextView3"
+                android:id="@+id/commentText"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="真了不起"
@@ -61,25 +61,26 @@
                 app:layout_constraintTop_toTopOf="@+id/appCompatTextView" />
 
             <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/appCompatTextView2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="错题已收录进错题本"
 
+                android:text="错题已收录进错题本"
                 android:textStyle="italic"
                 app:layout_constraintBottom_toBottomOf="@+id/appCompatTextView"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="@+id/appCompatTextView" />
+
             <com.google.android.material.card.MaterialCardView
                 android:id="@+id/materialCardView3"
                 android:layout_width="0dp"
                 android:layout_height="2dp"
                 android:backgroundTint="#247BA0"
-                android:layout_marginTop="5dp"
                 app:cardElevation="0dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/appCompatTextView" />
+                app:layout_constraintTop_toBottomOf="@+id/commentText" />
 
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/resultRecyclerView"
