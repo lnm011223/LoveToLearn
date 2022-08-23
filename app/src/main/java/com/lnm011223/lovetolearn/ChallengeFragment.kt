@@ -35,11 +35,20 @@ class ChallengeFragment : Fragment() {
         mainViewModel = ViewModelProvider(requireActivity()).get(MainViewModel::class.java)
         binding.errorBookButton.setOnClickListener {
             val extras = FragmentNavigatorExtras(it to "errorBook")
-//            Navigation.findNavController(it).navigate(R.id.action_challengeFragment_to_errorBookFragment,null,null,extras)
+            Navigation.findNavController(it).navigate(R.id.action_challengeFragment_to_errorBookFragment,null,null,extras)
         }
         binding.onlyExerciseButton.setOnClickListener {
+            mainViewModel.isOnlyExercise = 1
+            it.transitionName = "exercise"
             val extras = FragmentNavigatorExtras(it to "exercise")
-//            Navigation.findNavController(it).navigate(R.id.action_challengeFragment_to_exerciseFragment,null,null,extras)
+            Navigation.findNavController(it).navigate(R.id.action_challengeFragment_to_exerciseFragment,null,null,extras)
+        }
+
+        binding.challengeRightButton.setOnClickListener {
+            mainViewModel.isOnlyExercise = 0
+            it.transitionName = "exercise"
+            val extras = FragmentNavigatorExtras(it to "exercise")
+            Navigation.findNavController(it).navigate(R.id.action_challengeFragment_to_exerciseFragment,null,null,extras)
         }
     }
 

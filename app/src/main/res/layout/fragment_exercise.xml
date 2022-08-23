@@ -58,7 +58,7 @@
                 android:textStyle="bold"
                 android:textColor="#FDCA40"
                 android:id="@+id/timeText"
-                android:visibility="gone"
+
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 app:layout_constraintEnd_toEndOf="parent"
