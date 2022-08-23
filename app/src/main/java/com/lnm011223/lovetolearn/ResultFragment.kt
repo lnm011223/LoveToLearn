@@ -5,6 +5,7 @@ import android.transition.TransitionInflater
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.StaggeredGridLayoutManager
@@ -32,7 +33,16 @@ class ResultFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         mainViewModel = ViewModelProvider(requireActivity()).get(MainViewModel::class.java)
-        initResult()
+//        initResult()
+        resultList = arguments?.get("resultList") as ArrayList<Title>
+        var score = 0
+        for (i in resultList) {
+            if (i.isRight == 1) {
+                score += i.score
+            }
+        }
+
+        binding.scoreText.text = "$score 分"
         val layoutManager = StaggeredGridLayoutManager(1, StaggeredGridLayoutManager.VERTICAL)
         val adapter = context?.let { ResultAdapter(resultList, it) }
         binding.resultRecyclerView.layoutManager = layoutManager

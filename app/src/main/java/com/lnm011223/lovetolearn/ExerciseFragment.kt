@@ -91,9 +91,11 @@ class ExerciseFragment : Fragment() {
 //                }
 //            }
             timer?.cancel()
+            val bundle = Bundle()
+            bundle.putParcelableArrayList("resultList",titleList)
             val extras = FragmentNavigatorExtras(it to "result")
             Navigation.findNavController(it)
-                .navigate(R.id.action_exerciseFragment_to_resultFragment, null, null, extras)
+                .navigate(R.id.action_exerciseFragment_to_resultFragment, bundle, null, extras)
         }
         binding.lastButton.setOnClickListener {
             Toast.makeText(context, flag1.toString(), Toast.LENGTH_SHORT).show()
