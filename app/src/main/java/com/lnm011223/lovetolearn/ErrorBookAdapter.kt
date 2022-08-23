@@ -1,6 +1,7 @@
 package com.lnm011223.lovetolearn
 
 import android.content.Context
+import android.transition.Visibility
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -47,7 +48,10 @@ class ErrorBookAdapter(val errorList: ArrayList<MoreTitle>, val context: Context
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val error = errorList[position]
-        holder.errorText.text = error.title
+        var title = error.title.replace("input","  ")
+        title = title.replace("endl","\n")
+        holder.errorText.text = title
+
 
         Glide.with(context).load(error.imgUrl).into(holder.titleErrorImg)
 

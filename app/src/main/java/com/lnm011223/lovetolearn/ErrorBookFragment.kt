@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
+import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.StaggeredGridLayoutManager
 import com.lnm011223.lovetolearn.databinding.FragmentErrorBookBinding
 
@@ -37,8 +38,10 @@ class ErrorBookFragment : Fragment() {
         mainViewModel = ViewModelProvider(requireActivity()).get(MainViewModel::class.java)
         initErrorList()
         val layoutManager = StaggeredGridLayoutManager(1, StaggeredGridLayoutManager.VERTICAL)
+        val dividerItemDecoration = DividerItemDecoration(context,DividerItemDecoration.VERTICAL)
         val adapter = context?.let { ErrorBookAdapter(errorList, it) }
         binding.errorRecyclerView.layoutManager = layoutManager
+        binding.errorRecyclerView.addItemDecoration(dividerItemDecoration)
         binding.errorRecyclerView.adapter = adapter
     }
 
