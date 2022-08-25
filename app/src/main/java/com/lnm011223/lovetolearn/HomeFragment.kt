@@ -33,8 +33,9 @@ class HomeFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         mainViewModel = ViewModelProvider(requireActivity()).get(MainViewModel::class.java)
         binding.liveAnswerButton.setOnClickListener {
+            val extras = FragmentNavigatorExtras(it to "live")
             Navigation.findNavController(it)
-                .navigate(R.id.action_homeFragment_to_liveAnswerFragment)
+                .navigate(R.id.action_homeFragment_to_liveAnswerFragment,null,null,extras)
         }
         binding.bookButton.setOnClickListener {
             mainViewModel.isChallenge = 0

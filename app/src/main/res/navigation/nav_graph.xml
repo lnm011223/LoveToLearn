@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/challengeFragment">
+    app:startDestination="@id/subjectFragment">
 
     <fragment
         android:id="@+id/loginFragment"
@@ -64,11 +64,11 @@
         android:label="fragment_challenge"
         tools:layout="@layout/fragment_challenge" >
         <action
-            android:id="@+id/action_challengeFragment_to_exerciseFragment"
-            app:destination="@id/exerciseFragment" />
+            android:id="@+id/action_challengeFragment_to_challengeErrorBookFragment"
+            app:destination="@id/challengeErrorBookFragment" />
         <action
-            android:id="@+id/action_challengeFragment_to_errorBookFragment"
-            app:destination="@id/errorBookFragment" />
+            android:id="@+id/action_challengeFragment_to_challengeExerciseFragment"
+            app:destination="@id/challengeExerciseFragment" />
     </fragment>
     <fragment
         android:id="@+id/scholarshipFragment"
@@ -152,4 +152,36 @@
             android:id="@+id/action_resultFragment_to_videoFragment"
             app:destination="@id/videoFragment" />
     </fragment>
+    <fragment
+        android:id="@+id/challengeErrorBookFragment"
+        android:name="com.lnm011223.lovetolearn.challengeErrorBookFragment"
+        android:label="fragment_challenge_error_book"
+        tools:layout="@layout/fragment_challenge_error_book" >
+        <action
+            android:id="@+id/action_challengeErrorBookFragment_to_similarFragment"
+            app:destination="@id/similarFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/challengeExerciseFragment"
+        android:name="com.lnm011223.lovetolearn.challengeExerciseFragment"
+        android:label="fragment_challenge_exercise"
+        tools:layout="@layout/fragment_challenge_exercise" >
+        <action
+            android:id="@+id/action_challengeExerciseFragment_to_challengeResultFragment"
+            app:destination="@id/challengeResultFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/challengeResultFragment"
+        android:name="com.lnm011223.lovetolearn.challengeResultFragment"
+        android:label="fragment_challenge_result"
+        tools:layout="@layout/fragment_challenge_result" >
+        <action
+            android:id="@+id/action_challengeResultFragment_to_similarFragment"
+            app:destination="@id/similarFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/similarFragment"
+        android:name="com.lnm011223.lovetolearn.similarFragment"
+        android:label="fragment_similar"
+        tools:layout="@layout/fragment_similar" />
 </navigation>
