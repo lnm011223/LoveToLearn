@@ -4,11 +4,12 @@ import android.graphics.Bitmap
 import android.graphics.BitmapFactory
 import android.graphics.Color
 import android.os.Build
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.DisplayMetrics
 import android.view.View
+import android.view.Window
 import androidx.annotation.RequiresApi
+import androidx.appcompat.app.AppCompatActivity
 import androidx.core.graphics.ColorUtils
 import androidx.palette.graphics.Palette
 import com.lnm011223.lovetolearn.databinding.ActivityMainBinding
@@ -24,6 +25,9 @@ class MainActivity : AppCompatActivity() {
         setLightStatusBar()
         val dbHelper = MyDatabaseHelper(this,"LoveToLearn.db",1)
         dbHelper.writableDatabase
+        hideNav()
+        binding.backBtn.setOnClickListener { onBackPressed() }
+
     }
     @RequiresApi(Build.VERSION_CODES.M)
     private fun setBgImageByResource(imageResource: Int) {
@@ -93,4 +97,23 @@ class MainActivity : AppCompatActivity() {
         }
         return result
     }
+
+    /**
+     * 隐藏导航栏
+     */
+    fun hideNav() {
+        val window: Window = window
+        window.getDecorView().setSystemUiVisibility(
+            View.SYSTEM_UI_FLAG_LAYOUT_STABLE
+                    or View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION
+                    or View.SYSTEM_UI_FLAG_LOW_PROFILE
+                    or View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN
+                    or View.SYSTEM_UI_FLAG_HIDE_NAVIGATION // hide nav bar
+                    or View.SYSTEM_UI_FLAG_FULLSCREEN // hide status bar
+                    or View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY
+        )
+//        Log.d(TAG, "隐藏导航栏")
+    }
+
+
 }

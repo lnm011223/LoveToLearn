@@ -40,7 +40,7 @@
                 android:layout_width="0dp"
                 android:layout_height="2dp"
                 app:cardCornerRadius="100dp"
-                android:backgroundTint="#EA526F"
+                android:backgroundTint="#FFAC33"
                 android:layout_marginTop="5dp"
                 android:layout_marginBottom="5dp"
                 app:layout_constraintBottom_toTopOf="@+id/challengeIcon"
@@ -52,11 +52,11 @@
                 android:id="@+id/challengeIcon"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@drawable/riawardfill"
+                android:src="@drawable/ic_twemojitrophy"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:tint="#EA526F" />
+           />
         </androidx.constraintlayout.widget.ConstraintLayout>
     </com.google.android.material.card.MaterialCardView>
 

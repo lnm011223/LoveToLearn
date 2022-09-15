@@ -25,9 +25,10 @@
             android:layout_height="match_parent"
             android:paddingHorizontal="50dp"
             android:paddingVertical="50dp">
+
             <com.google.android.material.card.MaterialCardView
-                android:id="@+id/deskAppButton"
-                android:layout_width="150dp"
+                android:id="@+id/threeButton"
+                android:layout_width="200dp"
                 android:layout_height="wrap_content"
                 android:layout_margin="20dp"
                 app:cardCornerRadius="10dp"
@@ -44,36 +45,51 @@
                     android:padding="15dp">
 
                     <ImageView
-                        android:id="@+id/chineseButtonImg1"
+                        style="@style/MaterialAlertDialog.Material3.Title.Icon"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:src="@drawable/ic_baseline_desktop_windows_24"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent"
-                        app:tint="#FF6F59" />
+                        android:src="@drawable/mdibookopenpagevariant"
+                        app:layout_constraintBottom_toBottomOf="@+id/appCompatTextView3"
+                        app:layout_constraintStart_toStartOf="@+id/appCompatTextView4"
+                        app:layout_constraintTop_toTopOf="@+id/appCompatTextView3"
+                        app:tint="#26A69A" />
 
                     <androidx.appcompat.widget.AppCompatTextView
 
+                        android:id="@+id/appCompatTextView3"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginStart="15dp"
-                        android:text="课桌App"
-                        android:textStyle="bold"
-                        app:layout_constraintBottom_toBottomOf="@+id/chineseButtonImg1"
+                        android:text="三年级"
+                        android:textAppearance="?attr/textAppearanceHeadline6"
+
+                        app:layout_constraintBottom_toTopOf="@+id/appCompatTextView4"
+                        app:layout_constraintEnd_toEndOf="@+id/appCompatTextView4"
+                        app:layout_constraintStart_toStartOf="@+id/appCompatTextView4"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+
+                        android:id="@+id/appCompatTextView4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="每周五下午4:30-5:15"
+                        android:textAppearance="?attr/textAppearanceBody2"
+
+                        android:textColor="?android:attr/textColorSecondary"
+                        app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintStart_toEndOf="@+id/chineseButtonImg1"
-                        app:layout_constraintTop_toTopOf="@+id/chineseButtonImg1" />
+                        app:layout_constraintStart_toStartOf="parent" />
                 </androidx.constraintlayout.widget.ConstraintLayout>
             </com.google.android.material.card.MaterialCardView>
 
             <com.google.android.material.card.MaterialCardView
-                android:id="@+id/livbNoticeButton"
-                android:layout_width="150dp"
-                android:layout_height="wrap_content"
+                android:id="@+id/fourButton"
+                android:layout_width="200dp"
                 android:layout_margin="20dp"
+                android:layout_height="wrap_content"
                 app:cardCornerRadius="10dp"
                 app:cardElevation="0dp"
+
                 app:layout_constraintBottom_toTopOf="@+id/guideline3"
                 app:layout_constraintStart_toStartOf="@+id/guideline2"
                 app:strokeColor="#eeeeee"
@@ -85,36 +101,52 @@
                     android:padding="15dp">
 
                     <ImageView
-                        android:id="@+id/chineseButtonImg2"
+                        style="@style/MaterialAlertDialog.Material3.Title.Icon"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:src="@drawable/ic_baseline_notifications_24"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent"
-                        app:tint="#FF6F59" />
+                        android:src="@drawable/mdibookopenpagevariant"
+                        app:layout_constraintBottom_toBottomOf="@+id/appCompatTextView5"
+                        app:layout_constraintStart_toStartOf="@+id/appCompatTextView6"
+                        app:layout_constraintTop_toTopOf="@+id/appCompatTextView5"
+                        app:tint="#26A69A" />
 
                     <androidx.appcompat.widget.AppCompatTextView
 
+                        android:id="@+id/appCompatTextView5"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginStart="15dp"
-                        android:text="直播提醒"
-                        android:textStyle="bold"
-                        app:layout_constraintBottom_toBottomOf="@+id/chineseButtonImg2"
+                        android:text="四年级"
+                        android:textAppearance="?attr/textAppearanceHeadline6"
+
+                        app:layout_constraintBottom_toTopOf="@+id/appCompatTextView6"
+                        app:layout_constraintEnd_toEndOf="@+id/appCompatTextView6"
+                        app:layout_constraintStart_toStartOf="@+id/appCompatTextView6"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+
+                        android:id="@+id/appCompatTextView6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="每周五下午5:20-6:05"
+                        android:textAppearance="?attr/textAppearanceBody2"
+
+                        android:textColor="?android:attr/textColorSecondary"
+                        app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintStart_toEndOf="@+id/chineseButtonImg2"
-                        app:layout_constraintTop_toTopOf="@+id/chineseButtonImg2" />
+                        app:layout_constraintStart_toStartOf="parent" />
                 </androidx.constraintlayout.widget.ConstraintLayout>
             </com.google.android.material.card.MaterialCardView>
 
             <com.google.android.material.card.MaterialCardView
-                android:id="@+id/askButton"
-                android:layout_width="150dp"
-                android:layout_height="wrap_content"
+                android:id="@+id/fiveButton"
+                android:layout_width="200dp"
                 android:layout_margin="20dp"
+
+                android:layout_height="wrap_content"
                 app:cardCornerRadius="10dp"
                 app:cardElevation="0dp"
+
                 app:layout_constraintEnd_toStartOf="@+id/guideline2"
                 app:layout_constraintTop_toTopOf="@+id/guideline3"
                 app:strokeColor="#eeeeee"
@@ -126,32 +158,99 @@
                     android:padding="15dp">
 
                     <ImageView
-                        android:id="@+id/chineseButtonImg3"
+                        style="@style/MaterialAlertDialog.Material3.Title.Icon"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:src="@drawable/ic_mdicommentquestion"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent"
-                        app:tint="#FF6F59" />
+                        android:src="@drawable/mdibookopenpagevariant"
+                        app:layout_constraintBottom_toBottomOf="@+id/appCompatTextView7"
+                        app:layout_constraintStart_toStartOf="@+id/appCompatTextView8"
+                        app:layout_constraintTop_toTopOf="@+id/appCompatTextView7"
+                        app:tint="#26A69A" />
 
                     <androidx.appcompat.widget.AppCompatTextView
 
+                        android:id="@+id/appCompatTextView7"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginStart="15dp"
-                        android:text="我要提问"
-                        android:textStyle="bold"
-                        app:layout_constraintBottom_toBottomOf="@+id/chineseButtonImg3"
+                        android:text="五年级"
+                        android:textAppearance="?attr/textAppearanceHeadline6"
+
+                        app:layout_constraintBottom_toTopOf="@+id/appCompatTextView8"
+                        app:layout_constraintEnd_toEndOf="@+id/appCompatTextView8"
+                        app:layout_constraintStart_toStartOf="@+id/appCompatTextView8"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+
+                        android:id="@+id/appCompatTextView8"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="每周五傍晚6:10-6:55"
+                        android:textAppearance="?attr/textAppearanceBody2"
+
+                        android:textColor="?android:attr/textColorSecondary"
+                        app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintStart_toEndOf="@+id/chineseButtonImg3"
-                        app:layout_constraintTop_toTopOf="@+id/chineseButtonImg3" />
+                        app:layout_constraintStart_toStartOf="parent" />
                 </androidx.constraintlayout.widget.ConstraintLayout>
             </com.google.android.material.card.MaterialCardView>
 
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/sixButton"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="10dp"
+                app:cardElevation="0dp"
+                android:layout_margin="20dp"
 
 
+                app:layout_constraintStart_toStartOf="@+id/guideline2"
+                app:layout_constraintTop_toTopOf="@+id/guideline3"
+                app:strokeColor="#eeeeee"
+                app:strokeWidth="2dp">
 
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="15dp">
+
+                    <ImageView
+                        style="@style/MaterialAlertDialog.Material3.Title.Icon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/mdibookopenpagevariant"
+                        app:layout_constraintBottom_toBottomOf="@+id/appCompatTextView1"
+                        app:layout_constraintStart_toStartOf="@+id/appCompatTextView2"
+                        app:layout_constraintTop_toTopOf="@+id/appCompatTextView1"
+                        app:tint="#26A69A" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+
+                        android:id="@+id/appCompatTextView1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="六年级"
+                        android:textAppearance="?attr/textAppearanceHeadline6"
+
+                        app:layout_constraintBottom_toTopOf="@+id/appCompatTextView2"
+                        app:layout_constraintEnd_toEndOf="@+id/appCompatTextView2"
+                        app:layout_constraintStart_toStartOf="@+id/appCompatTextView2"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+
+                        android:id="@+id/appCompatTextView2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="每周五晚上7:00-7:45"
+                        android:textAppearance="?attr/textAppearanceBody2"
+
+                        android:textColor="?android:attr/textColorSecondary"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </com.google.android.material.card.MaterialCardView>
             <androidx.constraintlayout.widget.Guideline
                 android:id="@+id/guideline2"
                 android:layout_width="wrap_content"

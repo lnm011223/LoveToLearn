@@ -13,6 +13,8 @@
         <entry key="app/src/main/res/drawable/ic_launcher_background.xml" value="0.401" />
         <entry key="app/src/main/res/drawable/ic_mdibookopenblankvariant.xml" value="0.297" />
         <entry key="app/src/main/res/drawable/ic_mdicommentquestion.xml" value="0.316" />
+        <entry key="app/src/main/res/drawable/ic_round_arrow_back_24.xml" value="0.3075" />
+        <entry key="app/src/main/res/drawable/ic_twemojitrophy.xml" value="0.223" />
         <entry key="app/src/main/res/drawable/iconparksolidgoodone.xml" value="0.316" />
         <entry key="app/src/main/res/drawable/iconparksolidnotebook.xml" value="0.316" />
         <entry key="app/src/main/res/drawable/iconparksolidnotebookone.xml" value="0.316" />
@@ -20,13 +22,15 @@
         <entry key="app/src/main/res/drawable/icroundplaycircle.xml" value="0.316" />
         <entry key="app/src/main/res/drawable/materialsymbolseditnote.xml" value="0.316" />
         <entry key="app/src/main/res/drawable/materialsymbolslivetv.xml" value="0.316" />
+        <entry key="app/src/main/res/drawable/mdibookopenpagevariant.xml" value="0.401" />
         <entry key="app/src/main/res/drawable/mdiviewdashboardedit.xml" value="0.316" />
         <entry key="app/src/main/res/drawable/oouilistnumberedltr.xml" value="0.316" />
         <entry key="app/src/main/res/drawable/riawardfill.xml" value="0.316" />
         <entry key="app/src/main/res/drawable/riawardline.xml" value="0.316" />
         <entry key="app/src/main/res/drawable/uilletterchinesea.xml" value="0.297" />
-        <entry key="app/src/main/res/layout/activity_main.xml" value="0.3172295852928602" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.25" />
         <entry key="app/src/main/res/layout/book_item.xml" value="0.32877297990594273" />
+        <entry key="app/src/main/res/layout/challengeResult_item.xml" value="0.1782178217821782" />
         <entry key="app/src/main/res/layout/challenge_item.xml" value="0.32877297990594273" />
         <entry key="app/src/main/res/layout/errorBook_item.xml" value="0.20078125" />
         <entry key="app/src/main/res/layout/errorbook_item.xml" value="0.20078125" />
@@ -37,9 +41,10 @@
         <entry key="app/src/main/res/layout/fragment_challenge_result.xml" value="0.1782178217821782" />
         <entry key="app/src/main/res/layout/fragment_error_book.xml" value="0.15709046454767725" />
         <entry key="app/src/main/res/layout/fragment_exercise.xml" value="0.165" />
-        <entry key="app/src/main/res/layout/fragment_home.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/fragment_home.xml" value="0.1751412429378531" />
         <entry key="app/src/main/res/layout/fragment_live_answer.xml" value="0.32962804617357844" />
         <entry key="app/src/main/res/layout/fragment_login.xml" value="0.125" />
+        <entry key="app/src/main/res/layout/fragment_question.xml" value="0.20078125" />
         <entry key="app/src/main/res/layout/fragment_result.xml" value="0.165" />
         <entry key="app/src/main/res/layout/fragment_scholarship.xml" value="0.25" />
         <entry key="app/src/main/res/layout/fragment_signup.xml" value="0.3172295852928602" />

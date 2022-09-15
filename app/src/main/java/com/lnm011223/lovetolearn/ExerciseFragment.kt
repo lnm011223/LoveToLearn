@@ -104,7 +104,7 @@ class ExerciseFragment : Fragment() {
                 .navigate(R.id.action_exerciseFragment_to_resultFragment, bundle, null, extras)
         }
         binding.lastButton.setOnClickListener {
-            Toast.makeText(context, flag1.toString(), Toast.LENGTH_SHORT).show()
+//            Toast.makeText(context, flag1.toString(), Toast.LENGTH_SHORT).show()
             if (flag1 >= 1) {
                 flag1--
                 binding.titleBg.removeAllViews()
@@ -143,7 +143,7 @@ class ExerciseFragment : Fragment() {
         }
         binding.nextButton.setOnClickListener {
 
-            Toast.makeText(context, flag1.toString(), Toast.LENGTH_SHORT).show()
+//            Toast.makeText(context, flag1.toString(), Toast.LENGTH_SHORT).show()
             if (flag1 < titleList.size - 1) {
                 flag1++
                 binding.titleBg.removeAllViews()

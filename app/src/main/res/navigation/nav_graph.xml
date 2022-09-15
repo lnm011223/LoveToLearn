@@ -41,11 +41,15 @@
             android:id="@+id/action_signupFragment_to_loginFragment"
             app:destination="@id/loginFragment" />
     </fragment>
-    <fragment
+     <fragment
         android:id="@+id/liveAnswerFragment"
         android:name="com.lnm011223.lovetolearn.LiveAnswerFragment"
         android:label="fragment_live_answer"
-        tools:layout="@layout/fragment_live_answer" />
+        tools:layout="@layout/fragment_live_answer" >
+         <action
+             android:id="@+id/action_liveAnswerFragment_to_questionFragment"
+             app:destination="@id/questionFragment" />
+     </fragment>
     <fragment
         android:id="@+id/bookFragment"
         android:name="com.lnm011223.lovetolearn.BookFragment"
@@ -160,6 +164,12 @@
         <action
             android:id="@+id/action_challengeErrorBookFragment_to_similarFragment"
             app:destination="@id/similarFragment" />
+        <action
+            android:id="@+id/action_challengeErrorBookFragment_to_videoFragment"
+            app:destination="@id/videoFragment" />
+        <action
+            android:id="@+id/action_challengeErrorBookFragment_to_similarFragment2"
+            app:destination="@id/similarFragment" />
     </fragment>
     <fragment
         android:id="@+id/challengeExerciseFragment"
@@ -178,10 +188,18 @@
         <action
             android:id="@+id/action_challengeResultFragment_to_similarFragment"
             app:destination="@id/similarFragment" />
+        <action
+            android:id="@+id/action_challengeResultFragment_to_videoFragment"
+            app:destination="@id/videoFragment" />
     </fragment>
     <fragment
         android:id="@+id/similarFragment"
         android:name="com.lnm011223.lovetolearn.similarFragment"
         android:label="fragment_similar"
         tools:layout="@layout/fragment_similar" />
+    <fragment
+        android:id="@+id/questionFragment"
+        android:name="com.lnm011223.lovetolearn.QuestionFragment"
+        android:label="fragment_question"
+        tools:layout="@layout/fragment_question" />
 </navigation>

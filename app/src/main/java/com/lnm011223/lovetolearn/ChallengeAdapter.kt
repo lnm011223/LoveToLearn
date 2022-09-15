@@ -45,14 +45,14 @@ class ChallengeAdapter(val challengelist: ArrayList<Challenge>) :
         val challenge = challengelist[position]
         holder.challengeName.text = challenge.challengeName.toString()
         if (challenge.isDone == 0){
-            holder.challengeIcon.setImageResource(R.drawable.riawardline)
+//            holder.challengeIcon.setImageResource(R.drawable.riawardline)
             holder.challengeLine.setBackgroundColor(Color.parseColor("#eeeeee"))
             holder.challengeIcon.imageTintList = ColorStateList.valueOf(Color.parseColor("#eeeeee"))
             //holder.challengeLine.backgroundTintList = ColorStateList.valueOf(Color.parseColor("#eeeeee"))
         }else{
-            holder.challengeIcon.setImageResource(R.drawable.riawardfill)
+//            holder.challengeIcon.setImageResource(R.drawable.riawardfill)
             holder.challengeLine.setBackgroundColor(Color.parseColor("#EA526F"))
-            holder.challengeIcon.imageTintList = ColorStateList.valueOf(Color.parseColor("#EA526F"))
+//            holder.challengeIcon.imageTintList = ColorStateList.valueOf(Color.parseColor("#EA526F"))
         }
 
     }
